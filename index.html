@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <style>
+        body {
+            background-color: #ff6347;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .calculator label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .calculator input {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .calculator button {
+            padding: 8px 16px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background-color: #45a049;
+        }
+
+        .calculator .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Ingrese datos</h2>
+        <label for="preciosemana">Precio de la semana. Arriba de 15 kg. (USD):</label>
+        <input type="number" id="preciosemana">
+        <label for="largo">Largo(cm):</label>
+        <input type="number" id="largo">
+        <label for="ancho">Ancho(cm):</label>
+        <input type="number" id="ancho">
+        <label for="alto">Alto (cm):</label>
+        <input type="number" id="alto">
+        <label for="pesoneto">Peso Neto (kg):</label>
+        <input type="number" id="pesoneto">
+        <div class="result">
+            <h3>Aéreo</h3>
+            <label for="precioa">Precio Aéreo (USD):</label>
+            <input type="text" id="precioa" readonly>
+            <button onclick="calculatePrice('aereo')">Calcular Precio Aéreo</button>
+        </div>
+        <div class="result">
+            <h3>Marítimo</h3>
+            <label for="preciom">Precio Marítimo (USD):</label>
+            <input type="text" id="preciom" readonly>
+        </div>
+        <button onclick="calculatePrice('maritimo')">Calcular Precio Marítimo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
